@@ -3,51 +3,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Design Fest</title>
 </head>
 <body>
     <!-- start header -->
-    <header>
-        <a>
-            <img src="images/MC.svg" alt="logo micro club" class="nav-img">
-        </a>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="" class="nav-link-element">micro club</a></li>
-                <li><a href="" class="nav-link-element">home</a></li>
-                <li><a href="" class="nav-link-element">about</a></li>
-                <li>
-                    <a href="" class="nav-link-element">details</a>
-                    <ul class="nav-link-dropdown">
-                        <li><a href="" class="nav-link-element">speakers</a></li>
-                        <li><a href="" class="nav-link-element">schedule</a></li>
-                        <li><a href="" class="nav-link-element">workshops</a></li>
-                        <li><a href="" class="nav-link-element">location</a></li>
-                        <li><a href="" class="nav-link-element">sponsors</a></li>
-                    </ul>
-                </li>
-                <li><a href="" class="nav-link-element">contact</a></li>
-            </ul>
-            <button class="btn-full"><span>register in the event</span><i class="fas"></i></button>
-        </nav>  
+    <header class="container">
+        <div class="nav">
+            <a>
+                <img src="images/MC.svg" alt="logo micro club" class="nav-img">
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="" class="nav-link-element nav-link-active">micro club</a></li>
+                    <li><a href="" class="nav-link-element">home</a></li>
+                    <li><a href="" class="nav-link-element">about</a></li>
+                    <li class="dropdown">
+                        <a href="" class="nav-link-element">details</a>
+                        <ul class="nav-link-dropdown">
+                            <li><a href="" class="nav-link-element">speakers</a></li>
+                            <li><a href="" class="nav-link-element">schedule</a></li>
+                            <li><a href="" class="nav-link-element">workshops</a></li>
+                            <li><a href="" class="nav-link-element">location</a></li>
+                            <li><a href="" class="nav-link-element">sponsors</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="nav-link-element">contact</a></li>
+                </ul>
+                <button class="btn-full"><span>register in the event</span><i class="fa fa-arrow-right"></i></button>
+            </nav>  
+        </div>
     </header>
     <!-- end header  -->
 
     <!-- start home -->
-    <section class="sec" id="home">
-        <h1><span>micro club</span>design fest</h1>
-        <div class="home-txt-left">
-            <h3>12 april 2022</h3>
-            <p>conference room usthb</p>
-            <button class="btn-section">discovre more</button>
+    <section class="home" id="home">
+        <div class="container">
+            <h1>micro club<span>design fest</span></h1>
+            <div class="home-txt-left">
+                <h3>12 april 2022</h3>
+                <p>conference room usthb</p>
+                <button class="btn-section">discovre more</button>
+            </div>
         </div>
     </section>
     <!-- end home -->
 
     <!-- start about  -->
-    <section class="sec" id="about">
+    <section class="sec about" id="about">
         <div class="title">
-            <h3 class="title">about design fest</h3>
+            <h3 class="title">about <br> design fest</h3>
             <button class="btn-full"><span>register in the event</span><i class="fas"></i></button>
         </div>
         <div class="details">
@@ -116,7 +121,7 @@
             <h3 class="title">schedule</h3>
         </nav>
         <div class="schedule-table">
-            <div class="schedule nav">
+            <div class="schedule-nav">
                 <a href="">12th May</a>
                 <a href="">13th May</a>
                 <a href="">14th May</a>
@@ -249,7 +254,7 @@
     <!-- end workshops  -->
 
     <!-- start location  -->
-    <section class="sec" id="location">
+    <section class="" id="location">
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6396.936440694065!2d3.177344834887703!3d36.711314699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128e5189eb619c9d%3A0x787a0b4fa45e227a!2sUniversit%C3%A9%20des%20Sciences%20et%20de%20la%20Technologie%20Houari%20Boumediene!5e0!3m2!1sfr!2sdz!4v1650146427594!5m2!1sfr!2sdz"
             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
@@ -272,10 +277,10 @@
     <!-- end sponsors  -->
 
     <!-- start footer  -->
-    <footer>
+    <footer class="container">
         <div class="content-footer">
             <div class="logo-descp">
-                <img src="images/log" alt="sd">
+                <img src="images/MC.svg" alt="sd">
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, reiciendis, aliquam harum atque eos maiores rerum, omnis recusandae ex magnam fuga expedita libero laborum officia! Cumque debitis iure unde non?</p>
             </div>
             <div class="contact-us">
@@ -288,13 +293,13 @@
                 <h5>subscribe newsletter</h5>
                 <p>raising a heavy fur muff that covered the whole of her lower arm towards the viewer.</p>
                 <input type="text">
-                <button>subscribe for more details <i class="fas"></i></button>
+                <button class="btn-full">subscribe for more details <i class="fas"></i></button>
                 <p>submitting...</p>
             </div>
-            <hr>
-            <div class="copy-right">
-                copyright ??? 2021 all rights reserved <span>@MicroClub</span>
-            </div>
+        </div>
+        <!-- <hr> -->
+        <div class="copy-right">
+            copyright &copy; 2021 all rights reserved <a href="">@MicroClub</a>
         </div>
     </footer>
     <!-- end footer  -->
