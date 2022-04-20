@@ -11,10 +11,30 @@
     --secondary-font: 'Barlow', sans-serif;
 }
 
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--secondary);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -22,6 +42,10 @@ body {
     background-color: var(--background);
     font-family: var(--secondary-font);
     width: 100%;
+}
+
+.fa-arrow-right {
+    margin-left: 10px;
 }
 
 .go-up {
@@ -56,6 +80,9 @@ body {
     font-weight: 700;
     cursor: pointer;
     transition: background 300ms linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn-full:hover {
@@ -65,7 +92,7 @@ body {
 }
 
 .btn-section {
-    width: 200px;
+    width: 230px;
     height: 45px;
     color: var(--primary);
     border: 1px solid var(--primary);
@@ -75,6 +102,9 @@ body {
     font-weight: 700;
     cursor: pointer;
     transition: background 300ms linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn-section:hover {
@@ -123,10 +153,11 @@ h3.title {
     align-items: center;
     justify-content: space-between;
     height: 80px;
-    width: 85%;
+    width: 100%;
+    padding: 0 8%;
     position: fixed;
     top: 0;
-    left: calc(15% / 2);
+    left: 0;
     background-color: var(--dark);
 }
 
@@ -230,13 +261,22 @@ h3.title {
     font-family: var(--main-font);
     text-transform: uppercase;
     color: var(--primary);
-    width: 500px;
+    width: 8.2ch;
     line-height: 1.0;
 }
 
-.home>div>h1>span {
+.home>div>h1 span:nth-of-type(12),
+.home>div>h1 span:nth-of-type(13),
+.home>div>h1 span:nth-of-type(14),
+.home>div>h1 span:nth-of-type(15),
+.home>div>h1 span:nth-of-type(16),
+.home>div>h1 span:nth-of-type(17),
+.home>div>h1 span:nth-of-type(18),
+.home>div>h1 span:nth-of-type(19),
+.home>div>h1 span:nth-of-type(20),
+.home>div>h1 span:nth-of-type(21),
+.home>div>h1 span:nth-of-type(22) {
     color: white;
-    display: block;
 }
 
 .home .home-txt-left {
@@ -325,16 +365,20 @@ h3.title {
 /* start speakers  */
 #speakers .list-speakers .item-img {
     position: relative;
+    overflow: hidden;
+    cursor: pointer;
 }
 
 #speakers .list-speakers .item-img .item-social {
     list-style-type: none;
     position: absolute;
     bottom: 30px;
-    left: 25%;
+    left: 0;
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 100%;
+    padding: 0 20%;
+    transition: transform 300ms ease-in 1s;
 }
 
 #speakers .list-speakers .item-img .item-social li {
@@ -352,6 +396,8 @@ h3.title {
 
 #speakers .list-speakers .item-img .item-social li:hover {
     background-color: var(--primary);
+    box-shadow: 0 4px 94px var(--primary);
+    border: 1px solid white;
 }
 
 #speakers .list-speakers .item-img .item-social li img {
@@ -367,12 +413,18 @@ h3.title {
     text-transform: uppercase;
     font-family: var(--main-font);
     font-size: 25px;
+    cursor: pointer;
+}
+
+#speakers .list-speakers .item-info h5:hover {
+    color: var(--secondary);
 }
 
 #speakers .list-speakers .item-info p {
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     text-transform: capitalize;
+    width: 12ch;
 }
 
 #speakers .list-speakers .item-info p span {
@@ -553,6 +605,7 @@ h3.title {
 
 /* start sponsors  */
 #sponsors {
+    margin-top: 0px !important;
     height: fit-content;
     width: 80%;
     background-color: var(--dark);
@@ -574,6 +627,7 @@ h3.title {
 #sponsors .owl3 img {
     width: 100px;
 }
+
 /* end sponsors  */
 
 /* start footer  */
