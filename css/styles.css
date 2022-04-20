@@ -24,6 +24,21 @@ body {
     width: 100%;
 }
 
+.go-up {
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    z-index: 1000;
+    border-radius: 50px;
+    color: white;
+    background-color: #9e7400;
+    width: 40px;
+    height: 40px;
+    border: none;
+    font-weight: 900;
+    cursor: pointer;
+}
+
 .container {
     width: 85%;
     height: fit-content;
@@ -88,8 +103,22 @@ h3.title {
     margin-bottom: 50px;
 }
 
+.owl-carousel .owl-nav {
+    width: calc(100% + 100px);
+    display: flex;
+    margin: auto;
+    position: absolute;
+    top: 30%;
+    left: -50px;
+    justify-content: space-between;
+    font-size: 60px;
+    color: white;
+    z-index: 10000;
+}
+
 /* start header  */
 .nav {
+    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -176,12 +205,23 @@ h3.title {
 
 /* start home  */
 .home {
-    width: 100%;
     height: 100vh;
-    background: url('../images/background.jpg'), linear-gradient(to bottom, var(--dark), transparent);
-    background-blend-mode: overlay;
+    background: url(../images/background.jpg);
     background-size: cover;
-    background-position: center;
+}
+
+.home::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(11, 0, 22, 0.6) 0%, rgba(11, 0, 22, 0.7) 65%, rgba(11, 0, 22, 1) 100%);
+}
+
+.home>div {
+    position: relative;
 }
 
 .home>div>h1 {
@@ -282,6 +322,65 @@ h3.title {
 
 /* end about  */
 
+/* start speakers  */
+#speakers .list-speakers .item-img {
+    position: relative;
+}
+
+#speakers .list-speakers .item-img .item-social {
+    list-style-type: none;
+    position: absolute;
+    bottom: 30px;
+    left: 25%;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+#speakers .list-speakers .item-img .item-social li {
+    background-color: var(--secondary);
+    border-radius: 50px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 200ms linear;
+    cursor: pointer;
+}
+
+
+#speakers .list-speakers .item-img .item-social li:hover {
+    background-color: var(--primary);
+}
+
+#speakers .list-speakers .item-img .item-social li img {
+    width: 17px;
+}
+
+#speakers .list-speakers .item-img .item-social li:first-of-type img {
+    width: 10px;
+}
+
+#speakers .list-speakers .item-info h5 {
+    color: var(--primary);
+    text-transform: uppercase;
+    font-family: var(--main-font);
+    font-size: 25px;
+}
+
+#speakers .list-speakers .item-info p {
+    color: white;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+#speakers .list-speakers .item-info p span {
+    color: var(--gray);
+}
+
+/* end speakers  */
+
 /* start celebration  */
 #celebration {
     display: flex;
@@ -316,12 +415,135 @@ h3.title {
 /* end celebration  */
 
 /* start schedule  */
+#schedule {
+    height: fit-content;
+}
+
+#schedule>div {
+    background-color: var(--dark);
+}
+
+#schedule .schedule-table {
+    padding-bottom: 20px;
+}
+
+#schedule .schedule-table .schedule-nav {
+    width: calc(100% - 40px);
+    border-bottom: 1px solid #888;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    transition: color 300ms ease-in, border-bottom-color 300ms ease-in;
+}
+
+#schedule .schedule-table .schedule-nav a {
+    cursor: pointer;
+}
+
+#schedule .schedule-table .schedule-nav a:hover {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+#schedule .schedule-table .schedule-nav a:first-child {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+#schedule .schedule-table .schedule-nav a {
+    margin: 0 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px solid white;
+    padding: 20px 0;
+}
+
+#schedule .schedule-table .schedule-content .schedule-day .schedule-item {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    height: fit-content;
+    border-bottom: 1px dashed #888;
+    padding: 20px 0 40px;
+    margin: 0 20px;
+}
+
+#schedule .schedule-table .schedule-content .schedule-day .schedule-item h5 {
+    font-size: 26px;
+}
+
+#schedule .schedule-table .schedule-content .schedule-day .schedule-item .detail h5 {
+    text-transform: capitalize;
+}
+
+#schedule .schedule-table .schedule-content .schedule-day .schedule-item .detail ul {
+    color: var(--gray);
+    margin-left: 30px;
+    margin-top: 20px;
+    list-style-type: '- ';
+    text-transform: capitalize;
+}
+
 /* end schedule  */
 
 /* start workshops  */
+#workshops .item-workshops {
+    background-color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#workshops .item-workshops .item-img {
+    width: 100%;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#workshops .item-workshops .item-img img {
+    width: 150px;
+}
+
+#workshops .item-workshops {
+    background-color: var(--dark);
+}
+
+#workshops .item-workshops {
+    background-color: var(--dark);
+}
+
+#workshops .item-workshops .item-info h5 {
+    color: white;
+    text-transform: capitalize;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#workshops .item-workshops .item-info p {
+    font-size: 20px;
+}
+
+#workshops .item-workshops .item-info p span {
+    color: #424fff;
+}
+
 /* end workshops  */
 
 /* start location  */
+#location iframe {
+    opacity: .1;
+}
+
+#location iframe:hover {
+    opacity: 1.0;
+}
+
 #location iframe {
     width: 100% !important;
     margin: 100px 0;
@@ -331,9 +553,27 @@ h3.title {
 
 /* start sponsors  */
 #sponsors {
-    /* display: none; */
+    height: fit-content;
+    width: 80%;
+    background-color: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px 20px;
+    margin: auto;
 }
 
+#sponsors h2 {
+    text-transform: uppercase;
+    color: white;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+#sponsors .owl3 img {
+    width: 100px;
+}
 /* end sponsors  */
 
 /* start footer  */
