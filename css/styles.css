@@ -35,6 +35,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -114,9 +115,8 @@ body {
 
 .sec {
     width: 85%;
+    margin: 100px auto;
     height: fit-content;
-    margin: 100px auto !important;
-    height: 450px;
     /* background-color: gray; */
 }
 
@@ -232,6 +232,16 @@ h3.title {
     color: var(--dark);
 }
 
+@media (max-width:800px) {
+    .nav>a>img {
+        width: 70px;
+    }
+
+    .nav>nav {
+        display: none;
+    }
+}
+
 /* end header  */
 
 /* start home  */
@@ -303,6 +313,28 @@ h3.title {
     margin-top: 15px;
 }
 
+
+@media (max-width: 800px) {
+    .home::before {
+        height: calc(100% + 80px) !important;
+    }
+
+    .home>div>h1 {
+        font-size: 60px;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        width: 6;
+    }
+
+    .home .home-txt-left>h3 {
+        font-size: 30px;
+    }
+
+    .home .home-txt-left>p {
+        font-size: 16px;
+    }
+}
+
 /* end home  */
 
 /* start about  */
@@ -358,6 +390,34 @@ h3.title {
     font-size: 15px;
     font-weight: 600;
     text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+    .about>* {
+        width: 100%;
+    }
+
+    .about {
+        margin-top: 10px;
+        flex-direction: column;
+    }
+
+    .about>.details>.about-stat {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .about>.details>.about-stat h2 {
+        font-size: 30px !important;
+    }
+
+    .about>.details>.about-stat p {
+        font-size: 12px !important;
+    }
+
+    .about>.details>.about-stat .stat-item {
+        margin-right: 0px;
+    }
 }
 
 /* end about  */
@@ -431,6 +491,16 @@ h3.title {
     color: var(--gray);
 }
 
+@media (max-width: 800px) {
+    #speakers>nav {
+        flex-direction: column !important;
+    }
+
+    .owl-carousel .owl-nav {
+        display: none;
+    }
+}
+
 /* end speakers  */
 
 /* start celebration  */
@@ -462,6 +532,22 @@ h3.title {
 
 #celebration>.celebration-details>p {
     font-size: 20px;
+}
+
+@media (max-width: 800px) {
+    #celebration {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    #celebration>img {
+        width: 100%;
+    }
+
+    #celebration>.celebration-details {
+        margin: 0;
+        width: 100%;
+    }
 }
 
 /* end celebration  */
@@ -538,6 +624,17 @@ h3.title {
     text-transform: capitalize;
 }
 
+
+@media (max-width: 800px) {
+    #schedule .schedule-table .schedule-nav a {
+        font-size: 14px;
+    }
+
+    #schedule .schedule-table .schedule-content .schedule-day .schedule-item h5 {
+        font-size: 14px;
+    }
+}
+
 /* end schedule  */
 
 /* start workshops  */
@@ -547,7 +644,7 @@ h3.title {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 0 20px 40px !important;
 }
 
 #workshops .item-workshops .item-img {
@@ -583,6 +680,13 @@ h3.title {
 
 #workshops .item-workshops .item-info p span {
     color: #424fff;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    #workshops>nav {
+        flex-direction: column;
+    }
 }
 
 /* end workshops  */
@@ -626,6 +730,12 @@ h3.title {
 
 #sponsors .owl3 img {
     width: 100px;
+}
+
+@media (max-width: 800px) {
+    #sponsors .owl3 img {
+        width: 70px;
+    }
 }
 
 /* end sponsors  */
@@ -711,6 +821,27 @@ footer .copy-right {
 footer .copy-right a {
     color: rgb(0, 68, 255);
     text-decoration: none;
+}
+
+
+@media (max-width: 800px) {
+    footer .content-footer {
+        flex-direction: column;
+    }
+
+    footer .content-footer>* {
+        width: 100%;
+    }
+
+    footer .logo-descp img {
+        width: 70px;
+    }
+
+    footer .content-footer h5 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
 }
 
 /* end footer  */

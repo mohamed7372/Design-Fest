@@ -1,4 +1,44 @@
- $(document).ready(function () {
+// custom owl for each slider 
+$(document).ready(function () {
+    $(".owl1").owlCarousel({
+        items: 4,
+        dots: true,
+        margin: 10,
+        nav: true,
+        responsive:{
+            0: {items:1},
+            800: {items:1},
+            1000: {items:4}
+        }
+    });
+    $(".owl2").owlCarousel({
+        items: 3,
+        dots: true,
+        nav: true,
+        margin: 100,
+        responsive:{
+            0: {items:1},
+            800: {items:1},
+            1000: {items:3}
+        }
+    });
+    $(".owl3").owlCarousel({
+        loop: true,
+        nav: false,
+        items: 7,
+        margin: 20,
+        autoplay: true,
+        autoplayTimeout: 1000,
+        responsive:{
+            0: {items:3},
+            800: {items:3},
+            1000: {items:7}
+        }
+    });
+}); 
+
+// animate home section in landing page 
+$(document).ready(function () {
     $('h1').lettering();
     var tl = anime.timeline({
         easing: 'easeOutExpo',
@@ -39,3 +79,6 @@
         delay: anime.stagger(200)
     }, '-=1800');
 });
+
+// init aos to work
+AOS.init();
