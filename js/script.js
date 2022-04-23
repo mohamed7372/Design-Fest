@@ -82,3 +82,22 @@ $(document).ready(function () {
 
 // init aos to work
 AOS.init();
+
+// open/close pop up registration
+console.log('hel')
+var pop = document.getElementById('pop');
+var reg = document.getElementById('reg');
+var reg2 = document.getElementById('reg2');
+var close = document.getElementById('close');
+
+reg.addEventListener("click", () => {
+    pop.style.display = 'flex';
+});
+
+reg2.addEventListener("click", () => {
+    pop.style.display = 'flex';
+});
+
+close.addEventListener("click", () => {
+    pop.style.display = 'none';
+});

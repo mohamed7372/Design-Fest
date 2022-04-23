@@ -845,3 +845,113 @@ footer .copy-right a {
 }
 
 /* end footer  */
+
+/* start registration  */
+.registration {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.733);
+    z-index: 2000;
+    display: none;
+}
+
+.registration>div {
+    width: 70%;
+    height: 500px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--dark);
+}
+
+.registration .close {
+    width: 90%;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.registration h2 {
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 60px;
+}
+
+.registration form {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.registration form .input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 70px;
+    margin: 10px;
+}
+
+.registration form .input label {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 700;
+    color: white;
+    width: 150px !important;
+}
+
+.registration form .input input {
+    font-size: 20px;
+    width: 250px !important;
+    padding: 5px 20px;
+    border: 1px solid var(--primary);
+    background-color: transparent;
+    outline: none;
+}
+
+.registration button {
+    color: white;
+    width: 300px;
+}
+
+@media (max-width:800px) {
+    .registration {}
+
+    .registration>div {
+        width: 100% !important;
+        height: 100%; 
+        margin: 0 !important;
+        padding: 0 !important;
+        justify-content: flex-start;
+        left: 0;
+        top: 0;
+    }
+
+    .registration form {
+        width: 95%;
+        grid-template-columns: 100%;
+    }
+
+    .registration form .input{
+        width: 95%;
+    }
+
+    .registration form .input input {
+        width: 200px !important;
+    }
+
+    .registration form .input label {
+        font-size: 14px;
+        width: 100px !important;
+        /* margin-right: 10px; */
+    }
+}
+
+/* end registration  */

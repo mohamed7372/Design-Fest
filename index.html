@@ -14,6 +14,34 @@
 <body>
     <button class="go-up"><i class="fa-solid fa-arrow-up"></i></button>
 
+    <!-- start registration  -->
+    <div class="registration" id="pop">
+        <div>
+            <div class="close" id="close"><i class="fa-solid fa-xmark"></i></div>
+            <h2>registrations</h2>
+            <form action="">
+                <div class="input">
+                    <label for="fn">first name:</label>
+                    <input type="text" name="" id="fn">
+                </div>
+                <div class="input">
+                    <label for="ln">last name:</label>
+                    <input type="text" name="" id="ln">
+                </div>
+                <div class="input">
+                    <label for="email">e-mail:</label>
+                    <input type="email" name="" id="email">
+                </div>
+                <div class="input">
+                    <label for="phone">phone number:</label>
+                    <input type="tel" name="" id="phone">
+                </div>
+            </form>
+            <button class="btn-full reg"><span>complete the registration</span></button>
+        </div>
+    </div>
+    <!-- end registration  -->
+
     <!-- start header -->
     <header class="container">
         <div class="nav">
@@ -37,7 +65,7 @@
                     </li>
                     <li><a href="#contact" class="nav-link-element">contact</a></li>
                 </ul>
-                <button class="btn-full"><span>register in the event</span><i class="fa-solid fa-arrow-right"></i></button>
+                <button class="btn-full" id="reg"><span>register in the event</span><i class="fa-solid fa-arrow-right"></i></button>
             </nav>  
         </div>
     </header>
@@ -60,7 +88,7 @@
     <section class="sec about" id="about">
         <div class="title">
             <h3 data-aos='zoom-out' data-aos-duration='1500' data-aos-delay='500' class="title">about <br> design fest</h3>
-            <button data-aos='fade-up' data-aos-duration='1000' data-aos-delay='1000' class="btn-full"><span>register in the event</span><i class="fa-solid fa-arrow-right"></i></button>
+            <button id="reg2" data-aos='fade-up' data-aos-duration='1000' data-aos-delay='1000' class="btn-full"><span>register in the event</span><i class="fa-solid fa-arrow-right"></i></button>
         </div>
         <div class="details">
             <p data-aos='fade-left' data-aos-duration='1500' data-aos-delay='500' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, tempore nisi culpa, nobis officiis accusantium repellat, sed reprehenderit vero natus numquam sapiente dolorum dignissimos esse tenetur maxime? Enim, impedit adipisci?</p>
